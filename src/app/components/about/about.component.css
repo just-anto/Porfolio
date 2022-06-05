@@ -1,0 +1,31 @@
+.row{
+    padding: 20px;
+}
+div{
+    background-color: #a2798f;
+    text-align: center;
+}
+#name {
+    font-weight: bold;
+    margin-top: 30%;
+    margin-left: 10px;
+}
+
+@media (min-width: 576px) {
+    #profilepicture{
+        position: absolute;
+        width:15%;
+        box-shadow: 3px 3px 3px #ebdada;
+        left:5%;
+        top: 950px;
+    }
+}
+@media (max-width: 575px) {
+    #profilepicture{
+        position: absolute;
+        width:30%;
+        box-shadow: 3px 3px 3px #ebdada;
+        left:33%;
+        top: 650px;
+    }
+}

@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.network{
+    margin-right: 0.5em;
+}
+#logoAP{
+    width: 150px;
+}
+img{
+    width:50px;
+}
+.btn{
+    border-width: medium;
+}
+
+/*---phone view---*/
+@media(max-width:575){
+    .container{
+        flex-direction: column;
+    }
+    .network{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .network img{
+        margin: 0.3em;
+    }
+}
