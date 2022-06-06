@@ -13,6 +13,7 @@ import { LogoArgComponent } from './components/logo-arg/logo-arg.component';
 import { ProyectsComponent } from './components/proyects/proyects.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
