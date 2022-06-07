@@ -14,10 +14,10 @@ div{
 @media (min-width: 576px) {
     #profilepicture{
         position: absolute;
-        width:15%;
+        width:10%;
         box-shadow: 3px 3px 3px #ebdada;
         left:5%;
-        top: 950px;
+        top: 600px;
     }
 }
 @media (max-width: 575px) {
