@@ -1,14 +1,14 @@
-.row{
-    padding: 20px;
-    background-color: #FDFFFC
+.row {
+  padding: 20px;
+  background-color: #deba6f;
 }
-.container{
-    width: auto;
+.container {
+  width: auto;
 }
-.part1{
-    display: inline-block;
-    text-align:justify;
+.part1 {
+  display: inline-block;
+  text-align: justify;
 }
-.img-project{
-    box-shadow: 10px 10px 20px #123321;
+.img-project {
+  box-shadow: 10px 10px 20px #123321;
 }

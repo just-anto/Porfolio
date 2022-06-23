@@ -1,11 +1,11 @@
-.row{
-    background-color: #FDFFFC
+.row {
+  background-color: #deba6f;
 }
-footer{
-    color: #123321;
-    font-size:20px;
-    display:flex;
-    flex-direction: column;
-    text-align: center;
-    box-shadow: 3px -3px 5px #123321;
+footer {
+  color: #123321;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 3px -3px 5px #123321;
 }
