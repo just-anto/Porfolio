@@ -1,6 +1,6 @@
 .row{
     padding: 20px;
-    background-color: #a2798f
+    background-color: #FDFFFC
 }
 .container{
     width: auto;
@@ -10,5 +10,5 @@
     text-align:justify;
 }
 .img-project{
-    box-shadow: 10px 10px 20px #464545;
+    box-shadow: 10px 10px 20px #123321;
 }
