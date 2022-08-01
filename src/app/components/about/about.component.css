@@ -2,7 +2,7 @@
   padding: 20px;
 }
 div {
-  background-color: #deba6f;
+  background-color: #e3b746;
   text-align: center;
 }
 #name {
@@ -15,7 +15,7 @@ div {
   #profilepicture {
     position: absolute;
     width: 10%;
-    box-shadow: 3px 3px 3px #deba6f;
+    box-shadow: 3px 3px 3px #e3b746;
     left: 5%;
     top: 600px;
   }
@@ -24,7 +24,7 @@ div {
   #profilepicture {
     position: absolute;
     width: 30%;
-    box-shadow: 3px 3px 3px #deba6f;
+    box-shadow: 3px 3px 3px #e3b746;
     left: 33%;
     top: 650px;
   }
