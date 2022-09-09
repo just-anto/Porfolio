@@ -10,13 +10,21 @@ import { EducationComponent } from './components/education/education.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { HardSoftSkillsComponent } from './components/hard-soft-skills/hard-soft-skills.component';
 import { LogoArgComponent } from './components/logo-arg/logo-arg.component';
-import { ProyectsComponent } from './components/proyects/proyects.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { interceptorProvider } from './service/interceptor-service';
+import { FormsModule } from '@angular/forms';
+import { NewExperienceComponent } from './components/experience/new-experience.component';
+import { EditExperienceComponent } from './components/experience/edit-experience.component';
+import { EditEducationComponent } from './components/education/edit-education.component';
+import {NewEducationComponent} from './components/education/new-education.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+
+
 
 @NgModule({
   declarations: [
@@ -28,10 +36,14 @@ import { LoginComponent } from './components/login/login.component';
     ExperienceComponent,
     HardSoftSkillsComponent,
     LogoArgComponent,
-    ProyectsComponent,
+    ProjectsComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    NewExperienceComponent,
+    EditExperienceComponent,
+    EditEducationComponent,
+    NewEducationComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,8 +51,13 @@ import { LoginComponent } from './components/login/login.component';
     NgCircleProgressModule.forRoot({}),
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    interceptorProvider
+  ],
+  bootstrap: [
+    AppComponent],
+  
 })
 export class AppModule { }

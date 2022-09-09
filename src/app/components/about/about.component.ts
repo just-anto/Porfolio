@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { person } from 'src/app/model/person.model';
-import { PersonService } from 'src/app/service/person.service';
+import { user } from 'src/app/model/user.model';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-about',
@@ -8,12 +8,12 @@ import { PersonService } from 'src/app/service/person.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  person: person = new person("", "", "");
+  user: user = new user("", "", "");
 
-  constructor(public personService: PersonService) { }
+  constructor(public userService: UserService) { }
 
   ngOnInit(): void {
-    this.personService.getPerson().subscribe(data => {this.person = data});
+    this.userService.getUser().subscribe(data => {this.user = data});
   }
 
 }

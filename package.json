@@ -23,9 +23,11 @@
     "karma-webpack": "^5.0.0",
     "ng-circle-progress": "^1.6.0",
     "ngx-bootstrap": "^8.0.0",
+    "particles.js": "^2.0.0",
     "rxjs": "~7.5.0",
     "socket.io": "^4.5.1",
     "tslib": "^2.3.0",
+    "tsparticles-engine": "^2.2.4",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -33,7 +35,7 @@
     "@angular/cli": "~13.3.7",
     "@angular/compiler-cli": "~13.3.0",
     "@types/jasmine": "~3.10.0",
-    "@types/node": "^12.11.1",
+    "@types/node": "^12.20.55",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",

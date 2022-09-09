@@ -11,16 +11,23 @@
         ><img src="../../../assets/github.png" id="" title="github"
       /></a>
       <a href=""
-        ><img src="../../../assets/twitter.png" id="" title="twitter"
-      /></a>
-      <a href=""
         ><img src="../../../assets/instagram.png" id="" title="instagram"
       /></a>
-      <a href=""
-        ><img src="../../../assets/facebook.png" id="" title="facebook"
-      /></a>
-      <button type="button" class="btn btn-light" (click)="login()">
+      <button
+        type="button"
+        class="btn btn-light"
+        (click)="login()"
+        *ngIf="isLogged"
+      >
         INGRESAR
+      </button>
+      <button
+        type="button"
+        class="btn btn-light"
+        (click)="onLogOut()"
+        *ngIf="isLogged"
+      >
+        CERRAR SESION
       </button>
     </div>
   </div>

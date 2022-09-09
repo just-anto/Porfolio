@@ -1,24 +1,44 @@
 <div class="row">
-    <h1>Experiencia laboral</h1>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-         <ul>
-             <li>
-                 <h1>Trabajo 1.</h1> - <h3>(Años)</h3>
-             </li>
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem iure, nemo explicabo libero ipsum itaque, autem blanditiis, architecto laudantium eos quas assumenda. Quasi eius doloremque ad possimus minima tempora amet?</p>
-         </ul>
-         <ul>
-            <li>
-                <h1>Trabajo 2.</h1> - <h3>(Años)</h3>
-            </li>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem iure, nemo explicabo libero ipsum itaque, autem blanditiis, architecto laudantium eos quas assumenda. Quasi eius doloremque ad possimus minima tempora amet?</p>
-        </ul>
-        <ul>
-            <li>
-                <h1>Trabajo 3.</h1> - <h3>(Años)</h3>
-            </li>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem iure, nemo explicabo libero ipsum itaque, autem blanditiis, architecto laudantium eos quas assumenda. Quasi eius doloremque ad possimus minima tempora amet?</p>
-        </ul>
-    </div>
+  <h1>Experiencia laboral</h1>
+  <div class="clo-lg-2">
+    <button
+      type="button"
+      class="btn btn-light"
+      routerLink="/new-experience"
+      *ngIf="isLogged"
+    >
+      Nueva Experiencia
+    </button>
+  </div>
+
+  <div class="col-lg-1"></div>
+  <div class="col-lg-11">
+    <table class="table"></table>
+    <tbody>
+      <tr *ngFor="let Experience of experience">
+        <td>
+          <h2>{{ Experience.nameE }}</h2>
+        </td>
+        <td>{{ Experience.descriptionE }}</td>
+        <td *ngIf="isLogged">
+          <button
+            type="button"
+            class="btn btn-light"
+            routerLink="/edit-experience/{{ Experience.id }}"
+          >
+            <i class="bi bi-pencil-square"></i>EDITAR
+          </button>
+        </td>
+        <td *ngIf="isLogged">
+          <button
+            type="button"
+            class="btn btn-dark"
+            (click)="delete(Experience.id)"
+          >
+            <i class="bi bi-trash-fill"></i>BORRAR
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </div>
 </div>
