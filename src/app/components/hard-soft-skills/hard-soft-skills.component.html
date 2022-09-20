@@ -1,10 +1,25 @@
 <div class="row">
   <h1>Hard & Soft Skills</h1>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
+
+  <div class="col-lg-2 circle">
+    <button
+      type="button"
+      routerLink="/newskill"
+      class="btn btn-light"
+      *ngIf="isLogged"
+    >
+      Nueva Skill
+    </button>
+  </div>
+  <div
+    class="text-center col-sm-4 col-md-4 col-lg-4"
+    *ngFor="let skills of skills"
+  >
     <circle-progress
-      [percent]="85"
+      [percent]="skills.porcentage"
       [radius]="100"
       [imageSrc]="'../assets/CSS.png'"
+      [title]="skills.name"
       [showImage]="true"
       [imageHeight]="50"
       [imageWidth]="50"
@@ -18,115 +33,21 @@
     >
       ></circle-progress
     >
-  </div>
-  <div class="row">
-    <h1>Hard & Soft Skills</h1>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-      <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [imageSrc]="'../assets/CSS.png'"
-        [showImage]="true"
-        [imageHeight]="50"
-        [imageWidth]="50"
-        [showSubtitle]="false"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#ACC18A'"
-        [innerStrokeColor]="'#DADFF7'"
-        [animation]="true"
-        [animationDuration]="500"
-      >
-        ></circle-progress
-      >
-    </div>
-    <div class="row">
-      <h1>Hard & Soft Skills</h1>
-      <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-          [percent]="85"
-          [radius]="100"
-          [imageSrc]="'../assets/CSS.png'"
-          [showImage]="true"
-          [imageHeight]="50"
-          [imageWidth]="50"
-          [showSubtitle]="false"
-          [outerStrokeWidth]="16"
-          [innerStrokeWidth]="8"
-          [outerStrokeColor]="'#ACC18A'"
-          [innerStrokeColor]="'#DADFF7'"
-          [animation]="true"
-          [animationDuration]="50"
+    <div>
+      <td *ngIf="isLogged">
+        <button
+          type="button"
+          class="btn btn-light"
+          routerLink="/edit-hard-soft-skills/{{ skills.id }}"
         >
-          ></circle-progress
-        >
-      </div>
-      <div class="row">
-        <h1>Hard & Soft Skills</h1>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-          <circle-progress
-            [percent]="85"
-            [radius]="100"
-            [imageSrc]="'../assets/CSS.png'"
-            [showImage]="true"
-            [imageHeight]="50"
-            [imageWidth]="50"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#ACC18A'"
-            [innerStrokeColor]="'#DADFF7'"
-            [animation]="true"
-            [animationDuration]="50"
-          >
-            ></circle-progress
-          >
-        </div>
-        <div class="row">
-          <h1>Hard & Soft Skills</h1>
-          <div class="text-center col-sm-4 col-md-4 col-lg-4">
-            <circle-progress
-              [percent]="85"
-              [radius]="100"
-              [imageSrc]="'../assets/CSS.png'"
-              [showImage]="true"
-              [imageHeight]="50"
-              [imageWidth]="50"
-              [showSubtitle]="false"
-              [outerStrokeWidth]="16"
-              [innerStrokeWidth]="8"
-              [outerStrokeColor]="'#ACC18A'"
-              [innerStrokeColor]="'#DADFF7'"
-              [animation]="true"
-              [animationDuration]="50"
-            >
-              ></circle-progress
-            >
-          </div>
-          <div class="row">
-            <h1>Hard & Soft Skills</h1>
-            <div class="text-center col-sm-4 col-md-4 col-lg-4">
-              <circle-progress
-                [percent]="85"
-                [radius]="100"
-                [imageSrc]="'../assets/CSS.png'"
-                [showImage]="true"
-                [imageHeight]="50"
-                [imageWidth]="50"
-                [showSubtitle]="false"
-                [outerStrokeWidth]="16"
-                [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#ACC18A'"
-                [innerStrokeColor]="'#DADFF7'"
-                [animation]="true"
-                [animationDuration]="50"
-              >
-                ></circle-progress
-              >
-            </div>
-          </div>
-        </div>
-      </div>
+          <i class="bi bi-pencil-square"></i>
+        </button>
+      </td>
+      <td *ngIf="isLogged">
+        <button type="button" class="btn btn-dark" (click)="delete(skills.id)">
+          <i class="bi bi-trash-fill"></i>
+        </button>
+      </td>
     </div>
   </div>
 </div>
