@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>FrontEnd</title>
-    <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  </head>
-  <body>
-    <div class="background"></div>
-    <div id="tsparticles"></div>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protfolio</title>
+    <style>
+      style * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        width: 100%;
+        height: 100%vh;
+        color: white;
+        background: rgb(238, 174, 202);
+        background: linear-gradient(
+          45deg,
+          rgba(238, 174, 202, 1) 0%,
+          rgba(148, 187, 233, 1) 100%
+        );
+        background-size: 400% 400%;
+        position: relative;
+        animation: gradient 10s ease infinite;
+      }
 
-    <script src="tsparticles.engine.min.js"></script>
-  </body>
+      @keyframes gradient {
+        0% {
+          background-position: 0 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+    </style>
+  </head>
+  <body></body>
 </html>

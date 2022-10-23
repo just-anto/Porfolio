@@ -2,21 +2,24 @@
   padding: 20px;
 }
 div {
-  background-color: #e3b746;
+  background: #fff;
   text-align: center;
 }
+
+/*estilo nombre*/
 #name {
   font-weight: bold;
   margin-top: 30%;
   margin-left: 10px;
 }
 
+/*estilo foto de perfil*/
 @media (min-width: 576px) {
   #profilepicture {
     position: absolute;
     width: 10%;
     box-shadow: 3px 3px 3px #e3b746;
-    left: 5%;
+    left: 3%;
     top: 600px;
   }
 }
