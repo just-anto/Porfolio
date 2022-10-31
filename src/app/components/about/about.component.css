@@ -16,11 +16,14 @@ div {
 /*estilo foto de perfil*/
 @media (min-width: 576px) {
   #profilepicture {
-    position: absolute;
-    width: 10%;
+    border-radius: 100%;
     box-shadow: 3px 3px 3px #e3b746;
-    left: 3%;
-    top: 600px;
+  }
+
+  .description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media (max-width: 575px) {

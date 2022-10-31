@@ -1,7 +1,18 @@
+<div>
+  <button
+    type="button"
+    class="btn btn-light"
+    routerLink="/editabout/"
+    *ngIf="isLogged"
+  >
+    Editar usuario
+  </button>
+</div>
+
 <div class="row">
   <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
     <img
-      src="../../../assets/20220410_144338.jpg"
+      src="{{ user.img }}"
       class="img-fluid"
       id="profilepicture"
       class="img-fluid"
@@ -11,14 +22,11 @@
     <p id="name">{{ user.name }} {{ user.lastName }}</p>
     <p>Full Stack Developer Jr</p>
   </div>
-  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 description">
     <samp>
       <h1>Acerca de mí</h1>
       <p>
-        Me llamo Antonela, soy de Ushuaia. No tenemos pinguinos como mascotas,
-        pero si tengo una perra de 10 años y un gato de 2 años. Estudio
-        Ingenieria en sistemas. Me gusta andar en kayak, armar rompecabezas,
-        hacer caminatas en la montaña y cada tanto practicar arqueria.
+        {{ user.description }}
       </p>
     </samp>
   </div>

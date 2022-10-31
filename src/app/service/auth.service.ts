@@ -9,14 +9,14 @@ import { UserLogin } from '../model/user-login';
   providedIn: 'root'
 })
 export class AuthService {
-  authUrl = 'http://localhost:8080/auth/';
+  authUrl = 'https://portfoliomontagna.herokuapp.com/auth/';
 
   constructor(private httpClient: HttpClient) { }
 
   public new(newUser: NewUser): Observable<any> {
     return this.httpClient.post(this.authUrl + 'new', newUser);
   }
-  
+
   public login(userLogin: UserLogin): Observable<JwtDto> {
     return this.httpClient.post<JwtDto>(this.authUrl + 'login', userLogin);
   }
