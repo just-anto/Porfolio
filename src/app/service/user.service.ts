@@ -10,7 +10,7 @@ import { user } from '../model/user.model';
 })
 
 export class UserService {
-   URL = 'https://portfoliomontagna.herokuapp.com/user';
+   URL = 'http://localhost:8080/user';
   constructor(private httpClient: HttpClient) { }
 
   public list(): Observable<user[]> {

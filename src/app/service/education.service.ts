@@ -7,7 +7,7 @@ import { Education } from '../model/education';
   providedIn: 'root'
 })
 export class EducationService {
-  expURL = 'https://portfoliomontagna.herokuapp.com/education/';
+  expURL = 'http://localhost:8080/education/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -15,19 +15,19 @@ export class EducationService {
     return this.httpClient.get<Education[]>(this.expURL + 'list');
   }
 
-  public detail(id: number): Observable<Education>{
+  public detail(id: number): Observable<Education> {
     return this.httpClient.get<Education>(this.expURL + `detail/${id}`)
   }
- 
-  public save(education: Education): Observable<any>{
+
+  public save(education: Education): Observable<any> {
     return this.httpClient.post<any>(this.expURL + 'create', education);
   }
 
-  public update(id: number, education: Education): Observable<any>{
+  public update(id: number, education: Education): Observable<any> {
     return this.httpClient.put<any>(this.expURL + `update/${id}`, education);
   }
 
-  public delete(id: number): Observable<any>{
+  public delete(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.expURL + `delete/${id}`);
   }
 }

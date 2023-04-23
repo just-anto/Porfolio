@@ -9,7 +9,7 @@ import { UserLogin } from '../model/user-login';
   providedIn: 'root'
 })
 export class AuthService {
-  authUrl = 'https://portfoliomontagna.herokuapp.com/auth/';
+  authUrl = 'http://localhost:8080/auth/';
 
   constructor(private httpClient: HttpClient) { }
 
